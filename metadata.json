@@ -1,0 +1,34 @@
+{
+  "config": {
+    "data_root": "/home/Liyang/agent/EuroSAT_MS",
+    "num_classes": 10,
+    "class_names": [
+      "AnnualCrop",
+      "Forest",
+      "HerbaceousVegetation",
+      "Highway",
+      "Industrial",
+      "Pasture",
+      "PermanentCrop",
+      "Residential",
+      "River",
+      "SeaLake"
+    ],
+    "feature_dim": 512,
+    "img_size": 64
+  },
+  "dataset_sizes": {
+    "train": 18900,
+    "val": 3780,
+    "test": 8100
+  },
+  "performance": {
+    "test_accuracy": 0.9658024691358025
+  },
+  "training_info": {
+    "epochs_trained": 30,
+    "best_val_loss": 0.007987679430308552,
+    "final_train_acc": 99.28042328042328,
+    "final_val_acc": 99.2063492063492
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "model_name": "SentenceTransformer(\n  (0): Transformer({'max_seq_length': 128, 'do_lower_case': False, 'architecture': 'BertModel'})\n  (1): Pooling({'word_embedding_dimension': 384, 'pooling_mode_cls_token': False, 'pooling_mode_mean_tokens': True, 'pooling_mode_max_tokens': False, 'pooling_mode_mean_sqrt_len_tokens': False, 'pooling_mode_weightedmean_tokens': False, 'pooling_mode_lasttoken': False, 'include_prompt': True})\n)",
+  "embedding_dim": 384,
+  "training_config": {
+    "batch_size": 32,
+    "epochs": 100,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "patience": 20,
+    "gradient_clip": 1.0,
+    "early_stopping": true,
+    "scheduler": {
+      "name": "cosine",
+      "warmup_epochs": 5,
+      "min_lr": 1e-06
+    },
+    "mixed_precision": true,
+    "device": "cpu"
+  },
+  "knowledge_config": {
+    "embedding_dim": 384,
+    "top_k": 5,
+    "similarity_threshold": 0.7,
+    "max_context_length": 2048
+  }
+}
