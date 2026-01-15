@@ -1,0 +1,255 @@
+2026-01-04 22:03:05,456 - MultiAgentSystem - INFO - 初始化多智能体系统...
+2026-01-04 22:03:05,473 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda:0
+2026-01-04 22:03:05,473 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-multilingual-MiniLM-L12-v2
+2026-01-04 22:03:19,162 - Agent.RetrievalAgent - INFO - [RetrievalAgent] 初始化完成，加载 51 个文档
+2026-01-04 22:03:19,163 - MultiAgentSystem - INFO - ✅ 初始化检索智能体: RetrievalAgent
+2026-01-04 22:03:19,163 - Agent.AnalysisAgent - INFO - [AnalysisAgent] 初始化完成
+2026-01-04 22:03:19,163 - MultiAgentSystem - INFO - ✅ 初始化分析智能体: AnalysisAgent
+2026-01-04 22:03:19,163 - Agent.DecisionAgent - INFO - [DecisionAgent] 初始化完成
+2026-01-04 22:03:19,163 - MultiAgentSystem - INFO - ✅ 初始化决策智能体: DecisionAgent
+2026-01-04 22:03:19,163 - Agent.CoordinatorAgent - INFO - [CoordinatorAgent] 初始化完成，管理 3 个智能体
+2026-01-04 22:03:19,163 - MultiAgentSystem - INFO - ✅ 多智能体系统初始化完成
+2026-01-04 22:04:15,020 - Agent.CoordinatorAgent - INFO - [CoordinatorAgent] 开始执行工作流程，查询: 2
+2026-01-04 22:04:15,020 - Agent.CoordinatorAgent - INFO - [CoordinatorAgent] 阶段1: 知识检索
+2026-01-04 22:04:15,021 - Agent.RetrievalAgent - INFO - [RetrievalAgent] 检索查询: 2
+2026-01-04 22:04:15,067 - Agent.RetrievalAgent - INFO - [RetrievalAgent] 检索完成，找到 5 个相关文档
+2026-01-04 22:04:15,067 - Agent.RetrievalAgent - INFO - [RetrievalAgent] 任务完成，耗时: 0.05秒
+2026-01-04 22:04:15,067 - Agent.CoordinatorAgent - INFO - [CoordinatorAgent] 阶段2: 特征分析与风险评估
+2026-01-04 22:04:15,067 - Agent.AnalysisAgent - INFO - [AnalysisAgent] 分析查询: 2
+2026-01-04 22:04:15,068 - Agent.AnalysisAgent - INFO - [AnalysisAgent] 提取到特征: {'raw_features': {}, 'keywords': []}
+2026-01-04 22:04:15,069 - Agent.AnalysisAgent - INFO - [AnalysisAgent] 风险评估完成: {'risk_score': 0, 'risk_level': 'low', 'level_info': {'min': 0, 'max': 3, 'color': '🟢', 'description': '低风险'}, 'risk_factors': [], 'risk_components': {'feature_risk': 0.0, 'keyword_risk': 0.0, 'category_risk': 0.0}}
+2026-01-04 22:04:15,069 - Agent.AnalysisAgent - INFO - [AnalysisAgent] 任务完成，耗时: 0.00秒
+2026-01-04 22:04:15,069 - Agent.CoordinatorAgent - INFO - [CoordinatorAgent] 阶段3: 决策建议生成
+2026-01-04 22:04:15,069 - Agent.DecisionAgent - INFO - [DecisionAgent] 生成决策建议
+2026-01-04 22:04:15,069 - Agent.DecisionAgent - INFO - [DecisionAgent] 生成 1 个决策建议
+2026-01-04 22:04:15,069 - Agent.DecisionAgent - INFO - [DecisionAgent] 任务完成，耗时: 0.00秒
+2026-01-04 22:04:15,069 - Agent.CoordinatorAgent - INFO - [CoordinatorAgent] 阶段4: 结果整合
+2026-01-04 22:04:15,069 - Agent.CoordinatorAgent - INFO - [CoordinatorAgent] 工作流程完成: wf_20260104_220415
+2026-01-04 22:04:15,071 - MultiAgentSystem - INFO - 结果保存到: /home/Liyang/agent/finetuned_models/multi_agent_system/result_20260104_220415.json
+2026-01-04 22:04:15,071 - MultiAgentSystem - INFO - 响应保存到: /home/Liyang/agent/finetuned_models/multi_agent_system/response_20260104_220415.txt
+2026-01-04 22:04:35,349 - Agent.CoordinatorAgent - INFO - [CoordinatorAgent] 开始执行工作流程，查询: 1
+2026-01-04 22:04:35,350 - Agent.CoordinatorAgent - INFO - [CoordinatorAgent] 阶段1: 知识检索
+2026-01-04 22:04:35,350 - Agent.RetrievalAgent - INFO - [RetrievalAgent] 检索查询: 1
+2026-01-04 22:04:35,372 - Agent.RetrievalAgent - INFO - [RetrievalAgent] 检索完成，找到 5 个相关文档
+2026-01-04 22:04:35,372 - Agent.RetrievalAgent - INFO - [RetrievalAgent] 任务完成，耗时: 0.02秒
+2026-01-04 22:04:35,372 - Agent.CoordinatorAgent - INFO - [CoordinatorAgent] 阶段2: 特征分析与风险评估
+2026-01-04 22:04:35,372 - Agent.AnalysisAgent - INFO - [AnalysisAgent] 分析查询: 1
+2026-01-04 22:04:35,372 - Agent.AnalysisAgent - INFO - [AnalysisAgent] 提取到特征: {'raw_features': {}, 'keywords': []}
+2026-01-04 22:04:35,373 - Agent.AnalysisAgent - INFO - [AnalysisAgent] 风险评估完成: {'risk_score': 0.47, 'risk_level': 'low', 'level_info': {'min': 0, 'max': 3, 'color': '🟢', 'description': '低风险'}, 'risk_factors': ['相关类别: 极端高温脉冲预警'], 'risk_components': {'feature_risk': 0.28, 'keyword_risk': 0.14, 'category_risk': 0.05}}
+2026-01-04 22:04:35,373 - Agent.AnalysisAgent - INFO - [AnalysisAgent] 任务完成，耗时: 0.00秒
+2026-01-04 22:04:35,373 - Agent.CoordinatorAgent - INFO - [CoordinatorAgent] 阶段3: 决策建议生成
+2026-01-04 22:04:35,373 - Agent.DecisionAgent - INFO - [DecisionAgent] 生成决策建议
+2026-01-04 22:04:35,373 - Agent.DecisionAgent - INFO - [DecisionAgent] 生成 1 个决策建议
+2026-01-04 22:04:35,373 - Agent.DecisionAgent - INFO - [DecisionAgent] 任务完成，耗时: 0.00秒
+2026-01-04 22:04:35,373 - Agent.CoordinatorAgent - INFO - [CoordinatorAgent] 阶段4: 结果整合
+2026-01-04 22:04:35,373 - Agent.CoordinatorAgent - INFO - [CoordinatorAgent] 工作流程完成: wf_20260104_220435
+2026-01-04 22:04:35,374 - MultiAgentSystem - INFO - 结果保存到: /home/Liyang/agent/finetuned_models/multi_agent_system/result_20260104_220435.json
+2026-01-04 22:04:35,374 - MultiAgentSystem - INFO - 响应保存到: /home/Liyang/agent/finetuned_models/multi_agent_system/response_20260104_220435.txt
+2026-01-04 22:04:36,940 - Agent.CoordinatorAgent - INFO - [CoordinatorAgent] 开始执行工作流程，查询: 3
+2026-01-04 22:04:36,941 - Agent.CoordinatorAgent - INFO - [CoordinatorAgent] 阶段1: 知识检索
+2026-01-04 22:04:36,941 - Agent.RetrievalAgent - INFO - [RetrievalAgent] 检索查询: 3
+2026-01-04 22:04:36,954 - Agent.RetrievalAgent - INFO - [RetrievalAgent] 检索完成，找到 5 个相关文档
+2026-01-04 22:04:36,954 - Agent.RetrievalAgent - INFO - [RetrievalAgent] 任务完成，耗时: 0.01秒
+2026-01-04 22:04:36,955 - Agent.CoordinatorAgent - INFO - [CoordinatorAgent] 阶段2: 特征分析与风险评估
+2026-01-04 22:04:36,955 - Agent.AnalysisAgent - INFO - [AnalysisAgent] 分析查询: 3
+2026-01-04 22:04:36,955 - Agent.AnalysisAgent - INFO - [AnalysisAgent] 提取到特征: {'raw_features': {}, 'keywords': []}
+2026-01-04 22:04:36,955 - Agent.AnalysisAgent - INFO - [AnalysisAgent] 风险评估完成: {'risk_score': 0, 'risk_level': 'low', 'level_info': {'min': 0, 'max': 3, 'color': '🟢', 'description': '低风险'}, 'risk_factors': [], 'risk_components': {'feature_risk': 0.0, 'keyword_risk': 0.0, 'category_risk': 0.0}}
+2026-01-04 22:04:36,955 - Agent.AnalysisAgent - INFO - [AnalysisAgent] 任务完成，耗时: 0.00秒
+2026-01-04 22:04:36,955 - Agent.CoordinatorAgent - INFO - [CoordinatorAgent] 阶段3: 决策建议生成
+2026-01-04 22:04:36,955 - Agent.DecisionAgent - INFO - [DecisionAgent] 生成决策建议
+2026-01-04 22:04:36,955 - Agent.DecisionAgent - INFO - [DecisionAgent] 生成 1 个决策建议
+2026-01-04 22:04:36,955 - Agent.DecisionAgent - INFO - [DecisionAgent] 任务完成，耗时: 0.00秒
+2026-01-04 22:04:36,955 - Agent.CoordinatorAgent - INFO - [CoordinatorAgent] 阶段4: 结果整合
+2026-01-04 22:04:36,956 - Agent.CoordinatorAgent - INFO - [CoordinatorAgent] 工作流程完成: wf_20260104_220436
+2026-01-04 22:04:36,957 - MultiAgentSystem - INFO - 结果保存到: /home/Liyang/agent/finetuned_models/multi_agent_system/result_20260104_220436.json
+2026-01-04 22:04:36,957 - MultiAgentSystem - INFO - 响应保存到: /home/Liyang/agent/finetuned_models/multi_agent_system/response_20260104_220436.txt
+2026-01-04 22:04:38,036 - Agent.CoordinatorAgent - INFO - [CoordinatorAgent] 开始执行工作流程，查询: 4
+2026-01-04 22:04:38,036 - Agent.CoordinatorAgent - INFO - [CoordinatorAgent] 阶段1: 知识检索
+2026-01-04 22:04:38,036 - Agent.RetrievalAgent - INFO - [RetrievalAgent] 检索查询: 4
+2026-01-04 22:04:38,052 - Agent.RetrievalAgent - INFO - [RetrievalAgent] 检索完成，找到 5 个相关文档
+2026-01-04 22:04:38,052 - Agent.RetrievalAgent - INFO - [RetrievalAgent] 任务完成，耗时: 0.02秒
+2026-01-04 22:04:38,052 - Agent.CoordinatorAgent - INFO - [CoordinatorAgent] 阶段2: 特征分析与风险评估
+2026-01-04 22:04:38,052 - Agent.AnalysisAgent - INFO - [AnalysisAgent] 分析查询: 4
+2026-01-04 22:04:38,052 - Agent.AnalysisAgent - INFO - [AnalysisAgent] 提取到特征: {'raw_features': {}, 'keywords': []}
+2026-01-04 22:04:38,052 - Agent.AnalysisAgent - INFO - [AnalysisAgent] 风险评估完成: {'risk_score': 0, 'risk_level': 'low', 'level_info': {'min': 0, 'max': 3, 'color': '🟢', 'description': '低风险'}, 'risk_factors': [], 'risk_components': {'feature_risk': 0.0, 'keyword_risk': 0.0, 'category_risk': 0.0}}
+2026-01-04 22:04:38,052 - Agent.AnalysisAgent - INFO - [AnalysisAgent] 任务完成，耗时: 0.00秒
+2026-01-04 22:04:38,052 - Agent.CoordinatorAgent - INFO - [CoordinatorAgent] 阶段3: 决策建议生成
+2026-01-04 22:04:38,052 - Agent.DecisionAgent - INFO - [DecisionAgent] 生成决策建议
+2026-01-04 22:04:38,052 - Agent.DecisionAgent - INFO - [DecisionAgent] 生成 1 个决策建议
+2026-01-04 22:04:38,052 - Agent.DecisionAgent - INFO - [DecisionAgent] 任务完成，耗时: 0.00秒
+2026-01-04 22:04:38,052 - Agent.CoordinatorAgent - INFO - [CoordinatorAgent] 阶段4: 结果整合
+2026-01-04 22:04:38,052 - Agent.CoordinatorAgent - INFO - [CoordinatorAgent] 工作流程完成: wf_20260104_220438
+2026-01-04 22:04:38,053 - MultiAgentSystem - INFO - 结果保存到: /home/Liyang/agent/finetuned_models/multi_agent_system/result_20260104_220438.json
+2026-01-04 22:04:38,053 - MultiAgentSystem - INFO - 响应保存到: /home/Liyang/agent/finetuned_models/multi_agent_system/response_20260104_220438.txt
+2026-01-04 22:08:56,612 - MultiAgentSystem - INFO - 初始化多智能体系统...
+2026-01-04 22:08:56,630 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda:0
+2026-01-04 22:08:56,630 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-multilingual-MiniLM-L12-v2
+2026-01-04 22:09:04,864 - Agent.RetrievalAgent - INFO - [RetrievalAgent] 初始化完成，加载 51 个文档
+2026-01-04 22:09:04,864 - MultiAgentSystem - INFO - ✅ 初始化检索智能体: RetrievalAgent
+2026-01-04 22:09:04,864 - Agent.AnalysisAgent - INFO - [AnalysisAgent] 初始化完成
+2026-01-04 22:09:04,864 - MultiAgentSystem - INFO - ✅ 初始化分析智能体: AnalysisAgent
+2026-01-04 22:09:04,865 - Agent.DecisionAgent - INFO - [DecisionAgent] 初始化完成
+2026-01-04 22:09:04,865 - MultiAgentSystem - INFO - ✅ 初始化决策智能体: DecisionAgent
+2026-01-04 22:09:04,865 - Agent.CoordinatorAgent - INFO - [CoordinatorAgent] 初始化完成，管理 3 个智能体
+2026-01-04 22:09:04,865 - MultiAgentSystem - INFO - ✅ 多智能体系统初始化完成
+2026-01-04 22:09:18,743 - Agent.CoordinatorAgent - INFO - [CoordinatorAgent] 开始执行工作流程，查询: 今天35摄氏度，明天四十摄氏度
+2026-01-04 22:09:18,744 - Agent.CoordinatorAgent - INFO - [CoordinatorAgent] 阶段1: 知识检索
+2026-01-04 22:09:18,744 - Agent.RetrievalAgent - INFO - [RetrievalAgent] 检索查询: 今天35摄氏度，明天四十摄氏度
+2026-01-04 22:09:18,761 - Agent.RetrievalAgent - INFO - [RetrievalAgent] 检索完成，找到 5 个相关文档
+2026-01-04 22:09:18,761 - Agent.RetrievalAgent - INFO - [RetrievalAgent] 任务完成，耗时: 0.02秒
+2026-01-04 22:09:18,761 - Agent.CoordinatorAgent - INFO - [CoordinatorAgent] 阶段2: 特征分析与风险评估
+2026-01-04 22:09:18,761 - Agent.AnalysisAgent - INFO - [AnalysisAgent] 分析查询: 今天35摄氏度，明天四十摄氏度
+2026-01-04 22:09:18,762 - Agent.AnalysisAgent - INFO - [AnalysisAgent] 提取到特征: {'raw_features': {}, 'keywords': [], 'time_period': 'today'}
+2026-01-04 22:09:18,762 - Agent.AnalysisAgent - INFO - [AnalysisAgent] 风险评估完成: {'risk_score': 1.03, 'risk_level': 'low', 'level_info': {'min': 0, 'max': 3, 'color': '🟢', 'description': '低风险'}, 'risk_factors': ['相关类别: 极端高温脉冲预警'], 'risk_components': {'feature_risk': 0.62, 'keyword_risk': 0.31, 'category_risk': 0.1}}
+2026-01-04 22:09:18,762 - Agent.AnalysisAgent - INFO - [AnalysisAgent] 任务完成，耗时: 0.00秒
+2026-01-04 22:09:18,762 - Agent.CoordinatorAgent - INFO - [CoordinatorAgent] 阶段3: 决策建议生成
+2026-01-04 22:09:18,762 - Agent.DecisionAgent - INFO - [DecisionAgent] 生成决策建议
+2026-01-04 22:09:18,762 - Agent.DecisionAgent - INFO - [DecisionAgent] 生成 1 个决策建议
+2026-01-04 22:09:18,762 - Agent.DecisionAgent - INFO - [DecisionAgent] 任务完成，耗时: 0.00秒
+2026-01-04 22:09:18,762 - Agent.CoordinatorAgent - INFO - [CoordinatorAgent] 阶段4: 结果整合
+2026-01-04 22:09:18,762 - Agent.CoordinatorAgent - INFO - [CoordinatorAgent] 工作流程完成: wf_20260104_220918
+2026-01-04 22:09:18,762 - MultiAgentSystem - INFO - 结果保存到: /home/Liyang/agent/finetuned_models/multi_agent_system/result_20260104_220918.json
+2026-01-04 22:09:18,762 - MultiAgentSystem - INFO - 响应保存到: /home/Liyang/agent/finetuned_models/multi_agent_system/response_20260104_220918.txt
+2026-01-05 00:02:49,083 - MultiAgentSystem - INFO - 初始化多智能体系统...
+2026-01-05 00:02:49,099 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda:0
+2026-01-05 00:02:49,099 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-multilingual-MiniLM-L12-v2
+2026-01-05 00:02:54,835 - Agent.RetrievalAgent - INFO - [RetrievalAgent] 初始化完成，加载 51 个文档
+2026-01-05 00:02:54,835 - MultiAgentSystem - INFO - ✅ 初始化检索智能体: RetrievalAgent
+2026-01-05 00:02:54,835 - Agent.AnalysisAgent - INFO - [AnalysisAgent] 初始化完成
+2026-01-05 00:02:54,835 - MultiAgentSystem - INFO - ✅ 初始化分析智能体: AnalysisAgent
+2026-01-05 00:02:54,835 - Agent.DecisionAgent - INFO - [DecisionAgent] 初始化完成
+2026-01-05 00:02:54,836 - MultiAgentSystem - INFO - ✅ 初始化决策智能体: DecisionAgent
+2026-01-05 00:02:54,836 - Agent.CoordinatorAgent - INFO - [CoordinatorAgent] 初始化完成，管理 3 个智能体
+2026-01-05 00:02:54,836 - MultiAgentSystem - INFO - ✅ 多智能体系统初始化完成
+2026-01-05 22:12:23,823 - MultiAgentSystem - INFO - 初始化多智能体系统...
+2026-01-05 22:12:23,854 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda:0
+2026-01-05 22:12:23,854 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-multilingual-MiniLM-L12-v2
+2026-01-05 22:12:33,661 - Agent.RetrievalAgent - INFO - [RetrievalAgent] 初始化完成，加载 51 个文档
+2026-01-05 22:12:33,661 - MultiAgentSystem - INFO - ✅ 初始化检索智能体: RetrievalAgent
+2026-01-05 22:12:33,661 - Agent.AnalysisAgent - INFO - [AnalysisAgent] 初始化完成
+2026-01-05 22:12:33,661 - MultiAgentSystem - INFO - ✅ 初始化分析智能体: AnalysisAgent
+2026-01-05 22:12:33,661 - Agent.DecisionAgent - INFO - [DecisionAgent] 初始化完成
+2026-01-05 22:12:33,661 - MultiAgentSystem - INFO - ✅ 初始化决策智能体: DecisionAgent
+2026-01-05 22:12:33,661 - Agent.CoordinatorAgent - INFO - [CoordinatorAgent] 初始化完成，管理 3 个智能体
+2026-01-05 22:12:33,661 - MultiAgentSystem - INFO - ✅ 多智能体系统初始化完成
+2026-01-05 22:12:46,901 - MultiAgentSystem - INFO - 初始化多智能体系统...
+2026-01-05 22:12:46,929 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda:0
+2026-01-05 22:12:46,929 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-multilingual-MiniLM-L12-v2
+2026-01-05 22:12:55,278 - Agent.RetrievalAgent - INFO - [RetrievalAgent] 初始化完成，加载 51 个文档
+2026-01-05 22:12:55,279 - MultiAgentSystem - INFO - ✅ 初始化检索智能体: RetrievalAgent
+2026-01-05 22:12:55,279 - Agent.AnalysisAgent - INFO - [AnalysisAgent] 初始化完成
+2026-01-05 22:12:55,279 - MultiAgentSystem - INFO - ✅ 初始化分析智能体: AnalysisAgent
+2026-01-05 22:12:55,279 - Agent.DecisionAgent - INFO - [DecisionAgent] 初始化完成
+2026-01-05 22:12:55,279 - MultiAgentSystem - INFO - ✅ 初始化决策智能体: DecisionAgent
+2026-01-05 22:12:55,279 - Agent.CoordinatorAgent - INFO - [CoordinatorAgent] 初始化完成，管理 3 个智能体
+2026-01-05 22:12:55,279 - MultiAgentSystem - INFO - ✅ 多智能体系统初始化完成
+2026-01-05 22:12:55,377 - MultiAgentSystem - INFO - 初始化多智能体系统...
+2026-01-05 22:12:55,390 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda:0
+2026-01-05 22:12:55,390 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-multilingual-MiniLM-L12-v2
+2026-01-05 22:13:01,913 - Agent.RetrievalAgent - INFO - [RetrievalAgent] 初始化完成，加载 51 个文档
+2026-01-05 22:13:01,914 - MultiAgentSystem - INFO - ✅ 初始化检索智能体: RetrievalAgent
+2026-01-05 22:13:01,914 - Agent.AnalysisAgent - INFO - [AnalysisAgent] 初始化完成
+2026-01-05 22:13:01,914 - MultiAgentSystem - INFO - ✅ 初始化分析智能体: AnalysisAgent
+2026-01-05 22:13:01,914 - Agent.DecisionAgent - INFO - [DecisionAgent] 初始化完成
+2026-01-05 22:13:01,914 - MultiAgentSystem - INFO - ✅ 初始化决策智能体: DecisionAgent
+2026-01-05 22:13:01,914 - Agent.CoordinatorAgent - INFO - [CoordinatorAgent] 初始化完成，管理 3 个智能体
+2026-01-05 22:13:01,914 - MultiAgentSystem - INFO - ✅ 多智能体系统初始化完成
+2026-01-05 22:16:03,309 - MultiAgentSystem - INFO - 初始化多智能体系统...
+2026-01-05 22:16:03,328 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda:0
+2026-01-05 22:16:03,328 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-multilingual-MiniLM-L12-v2
+2026-01-05 22:16:11,163 - Agent.RetrievalAgent - INFO - [RetrievalAgent] 初始化完成，加载 51 个文档
+2026-01-05 22:16:11,163 - MultiAgentSystem - INFO - ✅ 初始化检索智能体: RetrievalAgent
+2026-01-05 22:16:11,163 - Agent.AnalysisAgent - INFO - [AnalysisAgent] 初始化完成
+2026-01-05 22:16:11,163 - MultiAgentSystem - INFO - ✅ 初始化分析智能体: AnalysisAgent
+2026-01-05 22:16:11,163 - Agent.DecisionAgent - INFO - [DecisionAgent] 初始化完成
+2026-01-05 22:16:11,163 - MultiAgentSystem - INFO - ✅ 初始化决策智能体: DecisionAgent
+2026-01-05 22:16:11,163 - Agent.CoordinatorAgent - INFO - [CoordinatorAgent] 初始化完成，管理 3 个智能体
+2026-01-05 22:16:11,163 - MultiAgentSystem - INFO - ✅ 多智能体系统初始化完成
+2026-01-05 22:16:21,597 - MultiAgentSystem - INFO - 初始化多智能体系统...
+2026-01-05 22:16:21,614 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda:0
+2026-01-05 22:16:21,614 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-multilingual-MiniLM-L12-v2
+2026-01-05 22:16:29,346 - Agent.RetrievalAgent - INFO - [RetrievalAgent] 初始化完成，加载 51 个文档
+2026-01-05 22:16:29,346 - MultiAgentSystem - INFO - ✅ 初始化检索智能体: RetrievalAgent
+2026-01-05 22:16:29,346 - Agent.AnalysisAgent - INFO - [AnalysisAgent] 初始化完成
+2026-01-05 22:16:29,346 - MultiAgentSystem - INFO - ✅ 初始化分析智能体: AnalysisAgent
+2026-01-05 22:16:29,346 - Agent.DecisionAgent - INFO - [DecisionAgent] 初始化完成
+2026-01-05 22:16:29,346 - MultiAgentSystem - INFO - ✅ 初始化决策智能体: DecisionAgent
+2026-01-05 22:16:29,346 - Agent.CoordinatorAgent - INFO - [CoordinatorAgent] 初始化完成，管理 3 个智能体
+2026-01-05 22:16:29,346 - MultiAgentSystem - INFO - ✅ 多智能体系统初始化完成
+2026-01-05 22:16:29,391 - MultiAgentSystem - INFO - 初始化多智能体系统...
+2026-01-05 22:16:29,402 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda:0
+2026-01-05 22:16:29,402 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-multilingual-MiniLM-L12-v2
+2026-01-05 22:16:36,056 - Agent.RetrievalAgent - INFO - [RetrievalAgent] 初始化完成，加载 51 个文档
+2026-01-05 22:16:36,056 - MultiAgentSystem - INFO - ✅ 初始化检索智能体: RetrievalAgent
+2026-01-05 22:16:36,057 - Agent.AnalysisAgent - INFO - [AnalysisAgent] 初始化完成
+2026-01-05 22:16:36,057 - MultiAgentSystem - INFO - ✅ 初始化分析智能体: AnalysisAgent
+2026-01-05 22:16:36,057 - Agent.DecisionAgent - INFO - [DecisionAgent] 初始化完成
+2026-01-05 22:16:36,057 - MultiAgentSystem - INFO - ✅ 初始化决策智能体: DecisionAgent
+2026-01-05 22:16:36,057 - Agent.CoordinatorAgent - INFO - [CoordinatorAgent] 初始化完成，管理 3 个智能体
+2026-01-05 22:16:36,057 - MultiAgentSystem - INFO - ✅ 多智能体系统初始化完成
+2026-01-05 23:22:38,580 - MultiAgentSystem - INFO - 初始化多智能体系统...
+2026-01-05 23:22:38,602 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda:0
+2026-01-05 23:22:38,602 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-multilingual-MiniLM-L12-v2
+2026-01-05 23:22:47,362 - Agent.RetrievalAgent - INFO - [RetrievalAgent] 初始化完成，加载 51 个文档
+2026-01-05 23:22:47,363 - MultiAgentSystem - INFO - ✅ 初始化检索智能体: RetrievalAgent
+2026-01-05 23:22:47,363 - Agent.AnalysisAgent - INFO - [AnalysisAgent] 初始化完成
+2026-01-05 23:22:47,363 - MultiAgentSystem - INFO - ✅ 初始化分析智能体: AnalysisAgent
+2026-01-05 23:22:47,363 - Agent.DecisionAgent - INFO - [DecisionAgent] 初始化完成
+2026-01-05 23:22:47,363 - MultiAgentSystem - INFO - ✅ 初始化决策智能体: DecisionAgent
+2026-01-05 23:22:47,363 - Agent.CoordinatorAgent - INFO - [CoordinatorAgent] 初始化完成，管理 3 个智能体
+2026-01-05 23:22:47,363 - MultiAgentSystem - INFO - ✅ 多智能体系统初始化完成
+2026-01-05 23:22:47,424 - MultiAgentSystem - INFO - 初始化多智能体系统...
+2026-01-05 23:22:47,436 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda:0
+2026-01-05 23:22:47,436 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-multilingual-MiniLM-L12-v2
+2026-01-05 23:22:48,698 - MultiAgentSystem - INFO - 初始化多智能体系统...
+2026-01-05 23:22:48,714 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda:0
+2026-01-05 23:22:48,714 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-multilingual-MiniLM-L12-v2
+2026-01-05 23:22:52,269 - Agent.RetrievalAgent - INFO - [RetrievalAgent] 初始化完成，加载 51 个文档
+2026-01-05 23:22:52,269 - MultiAgentSystem - INFO - ✅ 初始化检索智能体: RetrievalAgent
+2026-01-05 23:22:52,269 - Agent.AnalysisAgent - INFO - [AnalysisAgent] 初始化完成
+2026-01-05 23:22:52,269 - MultiAgentSystem - INFO - ✅ 初始化分析智能体: AnalysisAgent
+2026-01-05 23:22:52,269 - Agent.DecisionAgent - INFO - [DecisionAgent] 初始化完成
+2026-01-05 23:22:52,269 - MultiAgentSystem - INFO - ✅ 初始化决策智能体: DecisionAgent
+2026-01-05 23:22:52,269 - Agent.CoordinatorAgent - INFO - [CoordinatorAgent] 初始化完成，管理 3 个智能体
+2026-01-05 23:22:52,269 - MultiAgentSystem - INFO - ✅ 多智能体系统初始化完成
+2026-01-05 23:22:54,029 - Agent.RetrievalAgent - INFO - [RetrievalAgent] 初始化完成，加载 51 个文档
+2026-01-05 23:22:54,029 - MultiAgentSystem - INFO - ✅ 初始化检索智能体: RetrievalAgent
+2026-01-05 23:22:54,029 - Agent.AnalysisAgent - INFO - [AnalysisAgent] 初始化完成
+2026-01-05 23:22:54,029 - MultiAgentSystem - INFO - ✅ 初始化分析智能体: AnalysisAgent
+2026-01-05 23:22:54,029 - Agent.DecisionAgent - INFO - [DecisionAgent] 初始化完成
+2026-01-05 23:22:54,029 - MultiAgentSystem - INFO - ✅ 初始化决策智能体: DecisionAgent
+2026-01-05 23:22:54,029 - Agent.CoordinatorAgent - INFO - [CoordinatorAgent] 初始化完成，管理 3 个智能体
+2026-01-05 23:22:54,029 - MultiAgentSystem - INFO - ✅ 多智能体系统初始化完成
+2026-01-05 23:23:48,229 - MultiAgentSystem - INFO - 初始化多智能体系统...
+2026-01-05 23:23:48,244 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda:0
+2026-01-05 23:23:48,244 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-multilingual-MiniLM-L12-v2
+2026-01-05 23:23:53,760 - Agent.RetrievalAgent - INFO - [RetrievalAgent] 初始化完成，加载 51 个文档
+2026-01-05 23:23:53,761 - MultiAgentSystem - INFO - ✅ 初始化检索智能体: RetrievalAgent
+2026-01-05 23:23:53,761 - Agent.AnalysisAgent - INFO - [AnalysisAgent] 初始化完成
+2026-01-05 23:23:53,761 - MultiAgentSystem - INFO - ✅ 初始化分析智能体: AnalysisAgent
+2026-01-05 23:23:53,761 - Agent.DecisionAgent - INFO - [DecisionAgent] 初始化完成
+2026-01-05 23:23:53,761 - MultiAgentSystem - INFO - ✅ 初始化决策智能体: DecisionAgent
+2026-01-05 23:23:53,761 - Agent.CoordinatorAgent - INFO - [CoordinatorAgent] 初始化完成，管理 3 个智能体
+2026-01-05 23:23:53,761 - MultiAgentSystem - INFO - ✅ 多智能体系统初始化完成
+2026-01-05 23:24:05,425 - MultiAgentSystem - INFO - 初始化多智能体系统...
+2026-01-05 23:24:05,436 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda:0
+2026-01-05 23:24:05,436 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-multilingual-MiniLM-L12-v2
+2026-01-05 23:24:13,207 - Agent.RetrievalAgent - INFO - [RetrievalAgent] 初始化完成，加载 51 个文档
+2026-01-05 23:24:13,207 - MultiAgentSystem - INFO - ✅ 初始化检索智能体: RetrievalAgent
+2026-01-05 23:24:13,207 - Agent.AnalysisAgent - INFO - [AnalysisAgent] 初始化完成
+2026-01-05 23:24:13,207 - MultiAgentSystem - INFO - ✅ 初始化分析智能体: AnalysisAgent
+2026-01-05 23:24:13,207 - Agent.DecisionAgent - INFO - [DecisionAgent] 初始化完成
+2026-01-05 23:24:13,207 - MultiAgentSystem - INFO - ✅ 初始化决策智能体: DecisionAgent
+2026-01-05 23:24:13,207 - Agent.CoordinatorAgent - INFO - [CoordinatorAgent] 初始化完成，管理 3 个智能体
+2026-01-05 23:24:13,207 - MultiAgentSystem - INFO - ✅ 多智能体系统初始化完成
+2026-01-05 23:24:13,277 - MultiAgentSystem - INFO - 初始化多智能体系统...
+2026-01-05 23:24:13,290 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda:0
+2026-01-05 23:24:13,290 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: paraphrase-multilingual-MiniLM-L12-v2
+2026-01-05 23:24:20,143 - Agent.RetrievalAgent - INFO - [RetrievalAgent] 初始化完成，加载 51 个文档
+2026-01-05 23:24:20,143 - MultiAgentSystem - INFO - ✅ 初始化检索智能体: RetrievalAgent
+2026-01-05 23:24:20,143 - Agent.AnalysisAgent - INFO - [AnalysisAgent] 初始化完成
+2026-01-05 23:24:20,143 - MultiAgentSystem - INFO - ✅ 初始化分析智能体: AnalysisAgent
+2026-01-05 23:24:20,143 - Agent.DecisionAgent - INFO - [DecisionAgent] 初始化完成
+2026-01-05 23:24:20,143 - MultiAgentSystem - INFO - ✅ 初始化决策智能体: DecisionAgent
+2026-01-05 23:24:20,143 - Agent.CoordinatorAgent - INFO - [CoordinatorAgent] 初始化完成，管理 3 个智能体
+2026-01-05 23:24:20,143 - MultiAgentSystem - INFO - ✅ 多智能体系统初始化完成
